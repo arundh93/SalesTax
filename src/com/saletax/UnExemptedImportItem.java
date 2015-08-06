@@ -12,4 +12,8 @@ public class UnExemptedImportItem {
     public double calculateTax() {
         return basePrice * totalTax / 100;
     }
+
+    public double getFinalValue() {
+        return basePrice + calculateTax();
+    }
 }
