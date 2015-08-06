@@ -13,4 +13,11 @@ public class ExemptedItemTest {
 
         assertEquals(0.0, item.calculateTax(), 0);
     }
+
+    @Test
+    public void calculateFinalPriceForItem() {
+        ExemptedItem item = new ExemptedItem(10);
+
+        assertEquals(10.0, item.getFinalValue(), 0);
+    }
 }

@@ -14,4 +14,8 @@ public class ExemptedItem {
         return 0;
     }
 
+    public double getFinalValue() {
+        return basePrice + calculateTax();
+
+    }
 }
