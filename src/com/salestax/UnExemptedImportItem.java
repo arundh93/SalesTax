@@ -1,0 +1,19 @@
+package com.salestax;
+
+public class UnExemptedImportItem {
+
+    private int totalTax;
+    private double basePrice;
+    public UnExemptedImportItem(double basePrice) {
+        this.basePrice = basePrice;
+        totalTax = 15;
+    }
+
+    public double calculateTax() {
+        return basePrice * totalTax / 100;
+    }
+
+    public double getFinalValue() {
+        return basePrice + calculateTax();
+    }
+}

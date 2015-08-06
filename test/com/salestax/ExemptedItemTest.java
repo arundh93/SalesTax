@@ -1,6 +1,5 @@
 package com.salestax;
 
-import com.saletax.ExemptedItem;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
