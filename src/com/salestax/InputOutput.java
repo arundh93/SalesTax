@@ -10,9 +10,9 @@ public class InputOutput {
         this.quantityAndPrice = quantityAndPrice;
     }
 
-    public double[] getItem() {
+    public String getItem() {
         String input = scanner.nextLine();
-        return getQuantityAndPrice(input);
+        return input;
     }
 
     public double[] getQuantityAndPrice(String input) {

@@ -1,21 +1,26 @@
 <?xml version="1.0"?>
-<project name="MarsRover3.0" default="unittest">
+<project name="SalesTax" default="unittest">
 
     <path id="classpath">
         <fileset dir="lib" includes="*.jar"/>
     </path>
 
     <target name="compile">
-        <mkdir dir="build"/>
-        <javac srcdir="src;test" destdir="build" classpathref="classpath"/>
+        <javac srcdir="src;test" destdir="out" classpathref="classpath" includeantruntime="yes"/>
     </target>
 
 
     <target name="unittest" depends="compile">
+
         <junit haltonfailure="true" printsummary="true" showoutput="yes">
+            <test name="com.salestax.ExemptedImportedItemTest"/>
+            <test name="com.salestax.ExemptedItemTest"/>
+            <test name="com.salestax.UnExemptedItemTest"/>
+            <test name="com.salestax.InputOutputTest"/>
+            <test name="com.salestax.UnExemptedImportItemTest"/>
             <classpath>
                 <path refid="classpath"/>
-                <pathelement location="build"/>
+                <pathelement location="out"/>
             </classpath>
         </junit>
     </target>
