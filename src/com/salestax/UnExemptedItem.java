@@ -13,4 +13,8 @@ public class UnExemptedItem {
     public double calculateTax() {
         return basePrice * totalTax / 100;
     }
+
+    public double getFinalPrice() {
+        return basePrice + calculateTax();
+    }
 }
